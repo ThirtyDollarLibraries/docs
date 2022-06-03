@@ -28,11 +28,21 @@ The modifier is also item-specific, and only works for specific control items li
 `x`, which means to multiply the previous value by the value you specify. \
 The third one is... nothing at all! This instructs the site to set the tempo/volume, and not do any mathematical operations on it.
 
-## 4. Item types
+## 4. Efficiently combining items
+(Thanks [@karbis](https://github.com/karbis) for this [discovery](https://user-images.githubusercontent.com/42378704/171949623-fc26bbdd-6d04-4b46-b7a3-801e95e01e31.png))
+
+If you don't wanna put in the work of copying and pasting stuff over and over again, there's a much easier and compactor way of doing this.
+Append `=n` to the end of your item ID, replacing n with any number.
+
+For example, if you try `boom=4|_pause=4|boom=4` and load this into the editor, you will get this:
+![image by @karbis](https://media.discordapp.net/attachments/939617105089798185/982381430942351461/unknown.png)
+Very simple!
+
+## 5. Item types
 If you recall, item IDs are always strings. This means that you can easily tell what sound is being played without having to look it up on a list or something.
 
 ### But how do I know what IDs to pick?
-When I first started ThirtyDollarLib, I had to assemble all sounds into one sequence using the website, save it, and tediously construct an enum from there. Since the website has over 100 sounds, this would take over 5 minutes.
+When I first started ThirtyDollarLib, I had to assemble all sounds into one sequence using the website, save it, and tediously construct an enum from there. Since the website has over 100 sounds, this would take over 5 minutes. (Constructing enums in C# from a list is basically impossible
 
 Fortunately, the sound IDs, friendly names, and the sources of them are all stored in crisp and clean JSON format. You can view the JSON [here](https://thirtydollar.website/sounds.json), but sometimes browsers will mistakenly see this as a WAV file and download it in the wrong format. In case that happens, you can view a mirrored version of the JSON [here](https://github.com/ThirtyDollarLibraries/docs/blob/main/sounds.json).
 

@@ -32,7 +32,7 @@ The third one is... nothing at all! This instructs the site to set the tempo/vol
 (Thanks [@karbis](https://github.com/karbis) for this [discovery](https://user-images.githubusercontent.com/42378704/171949623-fc26bbdd-6d04-4b46-b7a3-801e95e01e31.png))
 
 If you don't wanna put in the work of copying and pasting stuff over and over again, there's a much easier and compactor way of doing this.
-Append `=n` to the end of your item ID, replacing n with any number.
+Append `=n` to the end of your item (not the item ID! if you have `boom@0` do not put `boom=4@0`, instead put `boom@0=4`), replacing n with any number.
 
 For example, if you try `boom=4|_pause=4|boom=4` and load this into the editor, you will get this:
 ![image by @karbis](https://media.discordapp.net/attachments/939617105089798185/982381430942351461/unknown.png)
